@@ -20,5 +20,9 @@ mainUnorderedList.addEventListener('click', (eventClick) => {
 
   const nestedList = eventClick.target.parentNode.querySelector('ul');
 
+  if (!nestedList) {
+    return;
+  }
+
   nestedList.hidden = !nestedList.hidden;
 });
